@@ -32,7 +32,7 @@ from Gates.sitechk import router as sitechk_router
 # CONFIGURATION & LOGGING
 # ═══════════════════════════════════════════════════════════════════════════════
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8873449307:AAGhIFzl2EgJtI2BgIAwM_KAcMiIF47Vhag")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8879737651:AAH0UI5XoljBGHgErBpd-pYToiuM0CuxJCo")
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 log = logging.getLogger(__name__)
