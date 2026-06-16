@@ -21,7 +21,7 @@ from database import get_all_sites, clear_sites, save_sites_list, merge_sites_li
 
 ADMIN_IDS    = [8760363324]
 TEST_CARD    = "4000223372377978|05|29|651"
-API_BASE_URL = "https://wizs.up.railway.app/shopii"
+API_BASE_URL = "https://goshopii.up.railway.app/shopii"
 API_TIMEOUT  = 120
 
 router = Router()
@@ -236,7 +236,7 @@ async def run_checker(bot, chat_id: int, sites: list, mode: str, status_msg_id: 
         db_sites = await asyncio.to_thread(get_all_sites)
         existing_norm = {normalize_url(s) for s in db_sites}
 
-    sem   = asyncio.Semaphore(50)
+    sem   = asyncio.Semaphore(200)
 
     async def worker(site):
         async with sem:
