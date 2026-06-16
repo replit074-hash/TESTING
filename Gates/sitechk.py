@@ -59,9 +59,8 @@ load_proxies()
 # DEAD / SUCCESS PATTERNS
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-# FIX: removed "generic_error" — GENERIC_ERROR is a valid bank decline response
-# from a working Shopify gateway. Keeping it here caused valid sites to be
-# wiped from the DB, leaving the mass checker with no good sites.
+# UPDATE: Added "generic_error" to dead patterns.
+# "captcha_required" is already present here.
 DEAD_PATTERNS = [
     "site error!", "site not supported", "connection error",
     "not shopify", "site requires login", "timeout", "http error",
@@ -80,18 +79,17 @@ DEAD_PATTERNS = [
     "errmissingreceiptid", "failed to get token", "failed to get checkout",
     "failed to add to cart", "no valid products", "payment method is not shopify",
     "max retries", "json", "resolve", "item", "order_paid",
+    "generic_error", # <--- ADDED HERE
 ]
 
-# FIX: added GENERIC_ERROR, INCORRECT_CVC, INVALID_CVV, INCORRECT_CVV,
-# TEST_MODE_LIVE_CARD — all indicate a real Shopify gateway that responded
-# to the payment attempt. These sites must be KEPT, not discarded.
+# UPDATE: Removed "GENERIC_ERROR" from success patterns.
 SUCCESS_PATTERNS = [
     "CARD_DECLINED", "INVALID_CVC", "INCORRECT_CVV", "INSUFFICIENT_FUNDS",
     "GENERIC_DECLINE", "DO NOT HONOR", "DO_NOT_HONOR", "UNKNOWN_ERROR",
     "Processing Error", "EXPIRED_CARD", "PICK_UP_CARD", "DECISION_RULE_BLOCK",
     "FRAUD_SUSPECTED", "3DS_REQUIRED", "AMOUNT_TOO_SMALL",
     "INVALID_PURCHASE_TYPE", "INVALID_PAYMENT_METHOD", "INCORRECT_NUMBER",
-    "GENERIC_ERROR", "INCORRECT_CVC", "INVALID_CVV", "INCORRECT_CVV",
+    "INCORRECT_CVC", "INVALID_CVV", "INCORRECT_CVV",
     "TEST_MODE_LIVE_CARD", "TRANSACTION_NOT_ALLOWED", "RESTRICTED_CARD",
     "STOLEN_CARD", "LOST_CARD", "INCORRECT_ZIP",
 ]
