@@ -1280,7 +1280,7 @@ async def _session_async_worker(bot, session_id, cards, user_obj, plan_emoji_id,
     if not session:
         return
 
-    sem = asyncio.Semaphore(50)
+    sem = asyncio.Semaphore(200)
 
     async def worker(cc_formatted, cc_num):
         if is_session_stopped(session_id):
