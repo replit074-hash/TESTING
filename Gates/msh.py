@@ -993,7 +993,7 @@ async def process_single_card(session_id: str, cc_formatted: str, cc_num: str,
     if is_session_stopped(session_id):
         return
 
-    if session['checked'] % 30 == 0 or session['checked'] == session['total']:
+    if session['checked'] % 200 == 0 or session['checked'] == session['total']:
         _tg_run(update_progress_message(bot, session_id))
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
