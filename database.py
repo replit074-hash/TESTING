@@ -11,7 +11,7 @@ from psycopg2.extras import RealDictCursor
 # CONNECTION
 # ═══════════════════════════════════════════════════════════════════════════════
 
-DATABASE_URL = "postgresql://postgres:JVFCZiXNnFOLwDsxiZuVYHRZZMDpruAO@postgres.railway.internal:5432/railway"
+DATABASE_URL = "postgresql://postgres:YqWiLDXhfXfUbCMwXxCMwAYwSIzJKLHm@postgres.railway.internal:5432/railway"
 
 
 def get_connection():
