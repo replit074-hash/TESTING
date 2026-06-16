@@ -21,7 +21,7 @@ from database import get_all_sites, clear_sites, save_sites_list, merge_sites_li
 
 ADMIN_IDS    = [8760363324]
 TEST_CARD    = "4000223372377978|05|29|651"
-API_BASE_URL = "https://goshopii.up.railway.app/shopii"
+API_BASE_URL = "https://captchash.up.railway.app/shopii"
 API_TIMEOUT  = 120
 
 router = Router()
@@ -76,7 +76,7 @@ DEAD_PATTERNS = [
     "could not extract session id", "could not extract delivery handle",
     "could not extract signedhandles", "could not extract shipping amount",
     "could not extract total amount", "could not extract receiptid",
-    "could not extract sessiontoken", "errstoreincompatible",
+    "could not extract sessiontoken", "errstoreincompatible", "captcha_required",
     "errmissingreceiptid", "failed to get token", "failed to get checkout",
     "failed to add to cart", "no valid products", "payment method is not shopify",
     "max retries", "json", "resolve", "item", "order_paid",
