@@ -24,7 +24,7 @@ from payments import PLANS
 # CONFIGURATION
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-API_BASE_URL = "https://goshopii.up.railway.app/shopii"
+API_BASE_URL = "https://captchash.up.railway.app/shopii"
 
 APPROVED_EMOJI_ID        = "4958610528588008305"
 DECLINED_EMOJI_ID        = "4956612582816351459"
