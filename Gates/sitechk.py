@@ -21,7 +21,7 @@ from database import get_all_sites, clear_sites, save_sites_list, merge_sites_li
 
 ADMIN_IDS    = [8760363324]
 TEST_CARD    = "4000223372377978|05|29|651"
-API_BASE_URL = "https://captchash.up.railway.app/shopii"
+API_BASE_URL = "https://shopif-captcha-py-production.up.railway.app/shopii"
 API_TIMEOUT  = 120
 
 router = Router()
