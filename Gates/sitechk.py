@@ -234,7 +234,7 @@ async def run_checker(bot, chat_id: int, sites: list, mode: str, status_msg_id: 
         db_sites = await asyncio.to_thread(get_all_sites)
         existing_norm = {normalize_url(s) for s in db_sites}
 
-    sem   = asyncio.Semaphore(200)
+    sem   = asyncio.Semaphore(100)
 
     async def worker(site):
         async with sem:
